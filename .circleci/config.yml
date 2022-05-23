@@ -96,7 +96,7 @@ jobs:
       # Your job code here            
       - run:
           command: |
-            cd frontend
+            cd backend
             npm run test
 
 workflows:
