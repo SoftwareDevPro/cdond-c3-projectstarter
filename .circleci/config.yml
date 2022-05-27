@@ -295,7 +295,8 @@ jobs:
           name: Install dependencies
           command: |
             # your code here
-            apk add --update ansible curl rsync openssh nodejs npm
+            sudo apt install software-properties-common
+            sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible
             pip install awscli            
       - run:
