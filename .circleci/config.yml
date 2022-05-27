@@ -226,7 +226,7 @@ jobs:
       - run:
           name: Send migration results to memstash
           command: |
-            if grep -q "has been executed successfully." ${MOUTPUT}; then
+            if grep -q "has been executed successfully." ${MOUTPUT}
             then
               # memstash.is down
               # If you are using kvdb.io, generate the bucket ID "NbS1XTM2mBCzdFANEi2bU3" in your local terminal first
