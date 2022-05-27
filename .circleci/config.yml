@@ -240,6 +240,7 @@ jobs:
     docker:
       # Docker image here that supports AWS CLI
       - image: circleci/node:13.8.0
+        user: root
     steps:
       # Checkout code from git
       - checkout
