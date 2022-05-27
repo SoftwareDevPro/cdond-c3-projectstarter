@@ -222,11 +222,11 @@ jobs:
             cd backend
             npm install
             # Run and save the migration output
-            npm run migrations > migrations_dump.txt
+            MOUTPUT=$(npm run migrations)
       - run:
           name: Send migration results to memstash
           command: |
-            if grep -q "has been executed successfully." migrations_dump.txt
+            if grep -q "has been executed successfully." ${MOUTPUT}
             then
               # memstash.is down
               # If you are using kvdb.io, generate the bucket ID "NbS1XTM2mBCzdFANEi2bU3" in your local terminal first
