@@ -230,7 +230,7 @@ jobs:
             then
               # memstash.is down
               # If you are using kvdb.io, generate the bucket ID "NbS1XTM2mBCzdFANEi2bU3" in your local terminal first
-              curl https://kvdb.io/NbS1XTM2mBCzdFANEi2bU3/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
+              curl https://kvdb.io/N8ZHwZQnCw4meP4sDLCDre/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi          
       
       # Here's where you will add some code to rollback on failure      
