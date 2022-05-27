@@ -226,6 +226,7 @@ jobs:
       - run:
           name: Send migration results to memstash
           command: |
+            echo ${MOUTPUT}
             if grep -q "has been executed successfully." ${MOUTPUT}
             then
               # memstash.is down
