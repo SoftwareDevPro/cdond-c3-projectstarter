@@ -281,6 +281,7 @@ jobs:
     docker:
       # Docker image here that supports Ansible
       - image: python:3.7-alpine3.11
+        user: root
     steps:
       # Checkout code from git
       - checkout
