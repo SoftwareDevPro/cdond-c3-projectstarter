@@ -405,6 +405,7 @@ jobs:
       - run:
           name: Update cloudfront distribution
           command: |
+            # https://knowledge.udacity.com/questions/741062
             export OldWorkflowID=$(aws cloudformation list-exports --query "Exports[?Name==\`OldWorkflowID\`].Value" --no-paginate --output text)
             OldWorkflowID=${OldWorkflowID#udapeople-}
 
@@ -459,7 +460,7 @@ jobs:
                 --stack-status-filter CREATE_COMPLETE --no-paginate --output text)) 
               echo Stack names: "${STACKS[@]}" 
 
-              if [[ "${CIRCLE_WORKFLOW_ID:0:7}" =~ "${OldWorkflowID}" ]]
+              if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
               then
                 aws s3 rb s3://udapeople-${OldWorkflowID} --force
                 aws cloudformation delete-stack --stack-name udapeople-frontend-${OldWorkflowID}
