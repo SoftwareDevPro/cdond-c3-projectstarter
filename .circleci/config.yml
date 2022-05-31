@@ -460,7 +460,7 @@ jobs:
                 --stack-status-filter CREATE_COMPLETE --no-paginate --output text)) 
               echo Stack names: "${STACKS[@]}" 
 
-              if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
+              if [[ "${OldWorkflowID}" =~ "${STACKS[@]}"  ]]
               then
                 aws s3 rb s3://udapeople-${OldWorkflowID} --force
                 aws cloudformation delete-stack --stack-name udapeople-frontend-${OldWorkflowID}
