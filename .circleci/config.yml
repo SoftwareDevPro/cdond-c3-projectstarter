@@ -180,7 +180,7 @@ jobs:
             cat .circleci/ansible/inventory.txt
 
       - persist_to_workspace:
-          root: ~/
+          root: .circleci/ansible
           paths:
             - project/.circleci/ansible/inventory.txt
       
@@ -210,6 +210,7 @@ jobs:
           name: Configure server
           command: |
             # Your code here
+            export ANSIBLE_HOST_KEY_CHECKING=False
             ansible-playbook -i /tmp/.circleci/ansible/inventory.txt .circleci/ansible/configure-server.yml
       
       # Here's where you will add some code to rollback on failure      
