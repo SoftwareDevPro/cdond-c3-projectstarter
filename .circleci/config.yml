@@ -414,7 +414,7 @@ jobs:
             echo OldWorkflowID: "${OldWorkflowID}"  
             echo CurrentWorkflowID: "${CurrentWorkflowID}"  
 
-            if [[ $OldWorkflowID = EMPTY ]] 
+            if [ -z "$OldWorkflowID" ] 
             then    
               echo "Oldworkflow is InitialStack"         
               OldWorkflowID="${CIRCLE_WORKFLOW_ID:0:7}"                
