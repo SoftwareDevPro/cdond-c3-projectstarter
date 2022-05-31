@@ -323,6 +323,13 @@ jobs:
             tar -czvf artifact.tar.gz backend
             mv artifact.tar.gz ~/project/.circleci/ansible/roles/deploy/files/
 
+            echo "[web]" > .circleci/ansible/inventory.txt
+            
+            BACKEND_IP=$(aws ec2 describe-instances \
+              --query 'Reservations[*].Instances[*].PublicIpAddress' \
+              --filters "Name=tag:Name,Values=backend-${CIRCLE_WORKFLOW_ID:0:7}" \
+              --output text)
+
             echo "Contents  of the inventory.txt file is -------"
             cat .circleci/ansible/inventory.txt
             
