@@ -1,13 +1,13 @@
 
-- name: "extract artifact"
+- name: "unarchive backend files"
   unarchive:
     src: artifact.tar.gz
-    dest: ~
+    dest: /home/ubuntu/
 
-- name: "startup node"
+- name: "executing node"
   shell: |
-    cd ~/backend/dist
-    #npm install
+    cd /home/ubuntu/backend/dist
     pm2 stop default
     pm2 start npm -- start
-    
+    pm2 ls
+  

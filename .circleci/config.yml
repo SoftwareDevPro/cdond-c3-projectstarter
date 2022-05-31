@@ -303,21 +303,29 @@ jobs:
             sudo apt install software-properties-common
             sudo add-apt-repository --yes --update ppa:ansible/ansible
             sudo apt install ansible
-            pip install awscli            
+            pip install awscli
+      - run:
+          name: install node modules
+          command: |
+            cd /root/project/backend
+            npm install                        
       - run:
           name: Deploy backend
           command: |
             # your code here
-            cd backend
+            cd /root/project/backend
             npm install
             npm run build
-            cd ..
+
+            cd /root/project
             # Zip the directory
             tar -C backend -czvf artifact.tar.gz .
-            cd .circleci/ansible
+            mv artifact.tar.gz ~/project/.circleci/ansible/roles/deploy/files/
+
             echo "Contents  of the inventory.txt file is -------"
-            cat inventory.txt
-            ansible-playbook -i inventory.txt deploy-backend.yml
+            cat .circleci/ansible/inventory.txt
+            
+            ansible-playbook -i .circleci/ansible/inventory.txt .circleci/ansible/deploy-backend.yml
 
       # Here's where you will add some code to rollback on failure  
       - destroy-environment
