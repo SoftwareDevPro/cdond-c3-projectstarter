@@ -189,6 +189,9 @@ To switch your backend to use the "Application" in Auth0, you should simply chan
 
 https://github.com/SoftwareDevPro/cdond-c3-projectstarter
 
+Public URL for your S3 Bucket (aka, your green candidate front-end) [URL02]
+http://udapeople-4da46eb.s3-website-us-east-1.amazonaws.com
+
 https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/presentation.pdf
 
 Build Jobs that failed because of compile errors. [SCREENSHOT01]
