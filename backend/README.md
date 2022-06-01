@@ -184,3 +184,60 @@ curl --request POST \
 (This only works with an "API" in Auth0. It will not work with an "Application" in Auth0 because they disable `client_credentials` grants by default and we have not found a way to enable that.)
 
 To switch your backend to use the "Application" in Auth0, you should simply change the clientId, clientSecret, and audience in your environment variables.
+
+## Rubric Submissions
+
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter
+
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/presentation.pdf
+
+Build Jobs that failed because of compile errors. [SCREENSHOT01]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT01.png
+
+Failed unit tests. [SCREENSHOT02]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT02.png
+
+Failure because of vulnerable packages. [SCREENSHOT03]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT03.png
+
+An alert from one of your failed builds. [SCREENSHOT04]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT04.png
+
+Console output of appropriate failure for infrastructure creation job (using CloudFormation). [SCREENSHOT05]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT05.png
+
+Console output of a smoke test job that is failing appropriately. [SCREENSHOT06]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT06.png
+
+Console output of a successful rollback after a failed smoke test. [SCREENSHOT07]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT07.png
+
+Console output of successful promotion of new version to production in CloudFront. [SCREENSHOT08]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT08.png
+
+Console output of successful cleanup job that removes old S3 bucket and EC2 instance. [SCREENSHOT09]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT09.png
+
+Evidence that the deploy jobs only happen on the master branch. [SCREENSHOT10]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT10.png
+
+Evidence of deployed and functioning front-end application in an S3 bucket [URL02].
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT11_A.png
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT11_B.png
+
+Evidence of deployed and functioning front-end application in CloudFront. [URL03_SCREENSHOT]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT12_A.png
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT12_B.png
+
+Evidence of healthy back-end application. [URL04_SCREENSHOT]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT13_A.png
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT13_B.png
+
+Evidence of Prometheus Server. [URL05_SCREENSHOT].
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT14.png
+
+Evidence that Prometheus is monitoring memory, cpu and disk usage of EC2 instances. [SCREENSHOT11]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT15.png
+
+Evidence that Prometheus and AlertManager send alerts when certain conditions exist in the EC2 instance. [SCREENSHOT12]
+https://github.com/SoftwareDevPro/cdond-c3-projectstarter/blob/master/instructions/myscreenshots/SCREENSHOT16.png
